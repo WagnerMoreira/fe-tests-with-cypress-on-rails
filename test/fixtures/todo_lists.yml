@@ -1,9 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  description: MyText
+  title: Also created using Rails test fixtures
+  description: Tomato bruschetta with balsamic glaze is an easy Italian appetizer topped with tomatoes, onions, garlic, basil and olive oil. Delicious, fresh and simple.
 
 two:
-  title: MyString
-  description: MyText
+  title: Created using Rails test fixtures called from a cypress command
+  description: Tomato bruschetta with balsamic glaze is an easy Italian appetizer topped with tomatoes, onions, garlic, basil and olive oil. Delicious, fresh and simple.
