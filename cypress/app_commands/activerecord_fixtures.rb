@@ -1,7 +1,7 @@
 # you can delete this file if you don't use Rails Test Fixtures
 
-fixtures_dir = command_options.try(:[], 'fixtures_dir')
-fixture_files = command_options.try(:[], 'fixtures')
+fixtures_dir = command_options.try(:[], 'test/fixtures') || "test/fixtures"
+fixture_files = command_options.try(:[], 'fixtures') || ["todo_lists"]
 
 if defined?(ActiveRecord)
   require "active_record/fixtures"
@@ -15,8 +15,8 @@ if defined?(ActiveRecord)
   "Fixtures Done" # this gets returned
 else # this else part can be removed
   logger.error "Looks like activerecord_fixtures has to be modified to suite your need"
-  Post.create(title: 'MyCypressFixtures')
-  Post.create(title: 'MyCypressFixtures2')
-  Post.create(title: 'MyRailsFixtures')
-  Post.create(title: 'MyRailsFixtures2')
+  TodoList.create(title: 'MyCypressFixtures', description: 'foccacia is a simple italian bread that is very simple to bake')
+  TodoList.create(title: 'MyCypressFixtures2', description: 'foccacia is a simple italian bread that is very simple to bake')
+  TodoList.create(title: 'MyRailsFixtures', description: 'foccacia is a simple italian bread that is very simple to bake')
+  TodoList.create(title: 'MyRailsFixtures2', description: 'foccacia is a simple italian bread that is very simple to bake')
 end
